@@ -9,6 +9,8 @@
 <body class="antialiased">
     <x-dashboard>
         <livewire:weather-forecast-tile position="a1" />
+        <livewire:dummy-tile position="a2"/>
+        <livewire:training position="a3:a5"/>
     </x-dashboard>
 </body>
 </html>

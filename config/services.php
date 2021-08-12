@@ -30,4 +30,8 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'training-app' => [
+        'url' => env('TRAINING_APP_URL'),
+    ],
+
 ];
