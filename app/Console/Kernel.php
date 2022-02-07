@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\FetchNextHolidayCommand;
 use App\Console\Commands\FetchTrainingDataCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -28,6 +29,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command(FetchDataFromApiCommand::class)->daily();
         $schedule->command(FetchTrainingDataCommand::class)->daily();
+        $schedule->command(FetchNextHolidayCommand::class)->daily();
     }
 
     /**
