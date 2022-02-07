@@ -19,7 +19,8 @@ class Training extends Component
     public function render()
     {
         $data = Tile::firstOrCreateForName('training-app')->getData('last-training');
-        $date = Carbon::createFromFormat('Y-m-d', $data['date']);
+
+        $date = Carbon::createFromFormat('Y-m-d', $data['date'] ?? now()->format('Y-m-d'));
         $trainings = collect($data['training'])->map(fn ($item) => new ExerciceDTO($item['exercice_name'], $item['repetitions']));
 
         return view('components.tiles.training', [

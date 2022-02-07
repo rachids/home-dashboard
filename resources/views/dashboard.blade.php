@@ -8,8 +8,9 @@
 </head>
 <body class="antialiased">
     <x-dashboard>
-        <livewire:weather-forecast-tile position="a1" />
+        <livewire:weather-forecast-tile position="a1:a2" />
         <livewire:training position="b1"/>
+        <livewire:next-holiday position="b2"/>
     </x-dashboard>
 </body>
 </html>

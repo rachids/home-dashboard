@@ -1,12 +1,12 @@
 <x-dashboard-tile :position="$position">
-    <div class=" h-full">
+    <div class="h-full">
         <h2>Workout de Rachid</h2>
 
         <div class="text-center font-bold text-xl tracking-wide">
                 <span class="block text-sm text-dimmed">
                     Dernier training en date:
                 </span>
-            {{ $date->format('d/m/Y') }}
+            {{ $date->isoFormat('dddd DD MMMM OY') }}
         </div>
 
         <div class="grid justify-items-center text-center">
