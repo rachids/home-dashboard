@@ -5,6 +5,7 @@ namespace App\Console;
 use App\Console\Commands\FetchTrainingDataCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Solitweb\WeatherForecastTile\FetchDataFromApiCommand;
 
 class Kernel extends ConsoleKernel
 {
@@ -25,7 +26,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command(\Solitweb\WeatherForecastTile\FetchDataFromApiCommand::class)->daily();
+        $schedule->command(FetchDataFromApiCommand::class)->daily();
         $schedule->command(FetchTrainingDataCommand::class)->daily();
     }
 
